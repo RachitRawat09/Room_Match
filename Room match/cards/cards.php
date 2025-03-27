@@ -3,91 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Listings</title>
+    <title>Login | Register</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-      
-        .row {
-            display: flex;
-            justify-content: space-between;
-        }
-        .col-md-4 {
-            display: flex;
-            flex: 1;
-            max-width: 32%;
-        }
-        .property-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .property-card img {
-            border-radius: 10px;
-        }
-        .verified-roommates {
+        body {
+            background-color: #f8f9fa;
+            height: 100vh;
             display: flex;
             align-items: center;
-            margin-top: auto;
+            justify-content: center;
+            overflow: hidden;
         }
-        .verified-roommates img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 5px;
+        .container {
+            max-width: 900px;
         }
-        .view-details-btn {
-            position: relative;
-            background: white;
-            color: black;
-            border: 1px solid black;
-            margin-top: auto;
-            align-self: flex-end;
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            height: 90vh;
+        }
+        .left-section img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+        .right-section {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn-toggle {
+            width: 100%;
+            display: flex;
+        }
+        .btn-toggle button {
+            flex: 1;
         }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="property-card">
-                    <img src="https://imagecdn.99acres.com/media1/12758/3/255163107M-1741168740325.jpg" class="img-fluid" alt="Modern Downtown Apartment">
-                    <h5 class="mt-3">Modern Downtown Apartment</h5>
-                    <p><strong>$2500/mo</strong> - New York, NY</p>
-                    <p>2 Beds | 2 Baths | 2 Roommates</p>
-                  
-                    <div class="d-flex justify-content-center">
-    <button class="btn btn-light border">View Details</button>
-</div>
-                </div>
+    <div class="container">
+        <div class="card d-flex flex-row">
+            <div class="col-md-6 left-section d-flex flex-column justify-content-center p-4">
+                <h2>RoomMatch connects you with compatible roommates and verified landlords for a better living experience.</h2>
+                <p><strong>AI-Powered Matching</strong> - Find roommates based on lifestyle, preferences, and compatibility.</p>
+                <p><strong>Verified Listings</strong> - All properties and landlords are verified for your safety.</p>
+                <img src="https://t3.ftcdn.net/jpg/08/23/42/34/360_F_823423411_l5nwHDEz9FIvRIFzlqpkvg9kFkX6Gwt8.jpg" class="img-fluid rounded" alt="House">
             </div>
-            <div class="col-md-4">
-                <div class="property-card">
-                    <img src="https://imagecdn.99acres.com/media1/12758/3/255163107M-1741168740325.jpg" class="img-fluid" alt="Cozy Studio Near University">
-                    <h5 class="mt-3">Cozy Studio Near University</h5>
-                    <p><strong>$1200/mo</strong> - Boston, MA</p>
-                    <p>0 Beds | 1 Bath | 2 Roommates</p>
-                 
-                    <div class="d-flex justify-content-center">
-    <button class="btn btn-light border">View Details</button>
-</div>
+            <div class="col-md-6 right-section">
+                <h3 class="text-center">Welcome Back</h3>
+                <p class="text-center">Sign in to your RoomMatch account to continue your journey</p>
+                <div class="btn-toggle mb-3">
+                    <button class="btn btn-light">Login</button>
+                    <button class="btn btn-secondary">Register</button>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="property-card">
-                    <img src="https://imagecdn.99acres.com/media1/12758/3/255163107M-1741168740325.jpg" class="img-fluid" alt="Luxury 3-Bedroom House with Garden">
-                    <h5 class="mt-3">Luxury 3-Bedroom House with Garden</h5>
-                    <p><strong>$3800/mo</strong> - San Francisco, CA</p>
-                    <p>3 Beds | 2.5 Baths | 2 Roommates</p>
-                  
-                    <div class="d-flex justify-content-center">
-    <button class="btn btn-light border">View Details</button>
-</div>
-                </div>
+                <form action="login.php" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input type="text" name="username" class="form-control" placeholder="Enter your username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Login</button>
+                </form>
+                <p class="text-center mt-3">Don't have an account? <a href="register.php">Register now</a></p>
             </div>
         </div>
     </div>
