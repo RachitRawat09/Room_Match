@@ -31,7 +31,8 @@ session_start();
     
     <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
+            <li class="nav-item"><a href="#how-it-works" class="nav-link">How It Works</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">Find Roommates</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Explore Properties</a></li>
         </ul>
